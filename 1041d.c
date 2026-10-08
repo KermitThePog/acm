@@ -15,16 +15,19 @@ int main() {
 
 	ll best = 0;
 
+	ll to_glide = h;
+	ll draft_index = 0;
+	ll distance = 0;
+
 	for (int i = 0; i < n; i++) {
-		ll to_glide = h;
-		ll draft_index = i;
-		ll distance = 0;
 		while (to_glide > 0) {
 			to_glide -= x[draft_index+1] - y[draft_index];
 			distance += x[draft_index+1] - x[draft_index];
 			draft_index++;
 		}
 		if (distance + to_glide > best) best = distance + to_glide;
+		distance -= x[i+1] - x[i];
+		to_glide += x[i+1] - y[i];
 	}
 	printf("%lld", best);
 }
