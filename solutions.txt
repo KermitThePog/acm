@@ -1,0 +1,9 @@
+ceiling n/a = n+a-1 / a
+
+permutations 2162D
+pole rozdilu - od l do r jsou jednicky, jinak 0
+zeptanim na cele pole zjistim pocet jednicek
+vim jak dlouhe je pole 1, pak delam jenom binary search
+
+ancient alphabet 935D
+pointery
