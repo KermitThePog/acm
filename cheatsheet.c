@@ -10,16 +10,16 @@ int comp(const void *a, const void *b) {
 ll binarysearch(ll arr[], ll n, ll x) {
     ll a = 0, b = n-1;
     while (a <= b) {
-        int m = a + (b - a) / 2;
+        int c = a + (b - a) / 2;
 
         // Check if x is present at mid
-        if (arr[m] == x) return m;
+        if (arr[c] == x) return c;
 
         // If x greater, ignore left half
-        if (arr[m] < x) a = m + 1;
+        if (arr[c] < x) a = c + 1;
 
         // If x is smaller, ignore right half
-        else b = m - 1;
+        else b = c - 1;
     }
 
     return -1;
