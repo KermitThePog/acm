@@ -7,6 +7,10 @@ int comp(const void *a, const void *b) {
 	return (*(ll*)a > *(ll*)b) - (*(ll*)a < *(ll*)b);
 }
 
+ll min3(ll a, ll b, ll c) {
+	return (a < b) ? (a < c ? a : c) : (b < c ? b : c);
+}
+
 ll binarysearch(ll arr[], ll n, ll x) {
     ll a = 0, b = n-1;
     while (a <= b) {
